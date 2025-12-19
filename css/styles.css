@@ -1,0 +1,141 @@
+:root{
+  --bg: #ffffff;
+  --soft: #f6f7fb;
+  --ink:#111827;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --radius: 1.25rem;
+}
+
+html { scroll-behavior: smooth; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.navbar-blur{
+  background: rgba(255,255,255,.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+
+.brand-logo{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.10);
+  background: #fff;
+}
+
+.hero{
+  background:
+    radial-gradient(900px 380px at 15% 10%, #f0f4ff, transparent),
+    radial-gradient(900px 380px at 85% 35%, #fff2ea, transparent),
+    linear-gradient(180deg, var(--soft), #fff);
+}
+
+.hero-card{
+  background: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.logo-hero{
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.build-gif{
+  max-width: 420px;
+  width: 100%;
+}
+
+.mini-info{
+  display: grid;
+  gap: .4rem;
+  color: var(--muted);
+}
+
+.section{
+  padding: 70px 0;
+}
+
+.section-title{
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.card-soft{
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+.contact-item{
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+  padding: .6rem 0;
+}
+.contact-item i{
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(17,24,39,.08);
+  color: rgba(17,24,39,.9);
+  font-size: 1.05rem;
+}
+
+.progress-soft{
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.06);
+  overflow: hidden;
+}
+.progress-soft .progress-bar{
+  background: rgba(17,24,39,.85);
+}
+
+.footer{
+  background: #0f172a;
+  color: #fff;
+}
+.footer .text-muted{ color: rgba(255,255,255,.65) !important; }
+.footer-logo{
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+}
+
+/* Animación al scrollear */
+.animate-on-scroll{
+  opacity: 0;
+  transform: translateY(10px);
+}
+.animate-on-scroll.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp .8s ease both;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile tweaks */
+@media (max-width: 575.98px){
+  .logo-hero{ max-width: 220px; }
+}
